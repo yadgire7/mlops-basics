@@ -57,3 +57,38 @@ push the changes to the main branch
 ```bash
 git push origin main
 ```
+
+one line command to add and commit simultaneously
+```bash
+git add . && git commit -m "your message" 
+```
+
+create get_gata.py file
+```bash
+touch src/get_gata.py
+```
+
+add and commit changes
+```bash
+git add . && git commit -m "your message"
+```
+
+create load_data.py file
+```bash
+touch src/load_gata.py
+```
+
+update the dvc.yaml file
+
+reproduce the changes made to dvc.yaml file
+```bash
+dvc repro
+```
+
+dvc.lock file will be created
+
+add and commit changes
+```bash
+git add . && git commit -m "completed stage 1"
+```
+
