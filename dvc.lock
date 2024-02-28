@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=parmas.yaml
+    deps:
+    - path: data_given/winequality-red.csv
+      hash: md5
+      md5: 2daeecee174368f8a33b82c8cccae3a5
+      size: 84199
+    - path: src/get_data.py
+      hash: md5
+      md5: 4f0cf40c2551f8013890c14a8a63cca7
+      size: 702
+    - path: src/load_data.py
+      hash: md5
+      md5: 264ad5c9396d3c06d5eb2bebc3267307
+      size: 632
+    outs:
+    - path: data/raw/winequality-red.csv
+      hash: md5
+      md5: da4a1d53785b1b5781a30160ba69edb9
+      size: 93599
