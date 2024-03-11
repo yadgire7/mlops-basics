@@ -57,7 +57,6 @@ def train_and_evaluate(config_path):
 #####################################################
     scores_file = config["reports"]["scores"]
     params_file = config["reports"]["params"]
-
     with open(scores_file, "w") as f:
         scores = {
             "rmse": rmse,
@@ -72,3 +71,10 @@ def train_and_evaluate(config_path):
             "l1_ratio": l1_ratio,
         }
         json.dump(params, f, indent=4)
+
+
+if __name__ == '__main__':
+    args = argparse.ArgumentParser()
+    args.add_argument("--config", default= "params.yaml")
+    parsed_args = args.parse_args()
+    train_and_evaluate(config_path= parsed_args.config)
