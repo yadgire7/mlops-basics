@@ -92,3 +92,10 @@ add and commit changes
 git add . && git commit -m "completed stage 1"
 ```
 
+change the hyperparameter values and compare the difference in the scores and the parameters
+```bash
+dvc repro
+```
+```bash
+dvc metrics diff
+```
